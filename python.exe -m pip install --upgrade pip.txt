@@ -5,3 +5,8 @@ setuptools==65.5.1
 sqlparse==0.4.4
 tzdata==2023.3
 wheel==0.38.4
+psycopg2-binary==2.9.7
+pillow==10.0.0
+ipython
+django-dump-load-utf8==0.0.4
+
