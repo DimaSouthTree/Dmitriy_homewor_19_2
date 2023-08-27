@@ -1,0 +1,27 @@
+{% extends 'catalog/base_product.html' %}
+{% block content %}
+{% load static %}
+{% load my_tags %}
+
+<div class="col">
+    {% for object in object_list %}
+    <div class="card shadow-sm">
+        <img class="card-img-top"
+            src="{{ object.product_image|mymedia }}"
+            alt="Card image cap">
+
+        <div class="card-body">
+            <p class="card-text"> - {{ object.purchase_price }} ₽</p>
+            <p class="card-text"> - {{ object.description }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-primary">Добавить в корзину</button>
+
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
